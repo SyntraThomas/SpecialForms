@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,15 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <main>
         <h1>Special forms in HTML</h1>
         <section>
             <h2>Auto-complete 1</h2>
-            <div class="form-group">
+            <div class="form-group required">
                 <label for="land">Land:</label>
-                <input type="text" name="land" id="land" list="landen">
+                <input type="text" name="land" id="land" list="landen" disabled>
                 <datalist id="landen">
                     <option value="NL">Nederland</option>
                     <option value="F">Frankrijk</option>
@@ -26,17 +28,22 @@
         </section>
         <section>
             <h2>Kiezen uit een lijst</h2>
-            <div class="form-group">
-                <label for="landlijst">Land:</label>
-                <select name="landlijst" id="landlijst">
-                    <option value="NL">Nederland</option>
-                    <option value="F">Frankrijk</option>
-                    <option value="D">Duitsland</option>
-                    <option value="L">Luxemburg</option>
-                    <option value="B">Belgie</option>
-                </select>
-            </div>
+            <form action="#">
+                <div class="form-group required">
+                    <label for="landlijst">Land:</label>
+                    <select name="landlijst" id="landlijst" required>
+                        <option value=""> - selecteer een land - </option>
+                        <option value="NL">Nederland</option>
+                        <option value="F">Frankrijk</option>
+                        <option value="D">Duitsland</option>
+                        <option value="L">Luxemburg</option>
+                        <option value="B">Belgie</option>
+                    </select>
+                </div>
+                <input type="submit" value="Verzenden">
+            </form>
         </section>
     </main>
 </body>
+
 </html>

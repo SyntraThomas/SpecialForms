@@ -3,3 +3,22 @@ main
     max-width: 800px;
     margin: 0 auto;
 }
+
+*:disabled
+{
+    background-color: darkgoldenrod;
+}
+
+*:required
+{
+    border-color: red;
+    /* background-color: rgba(255,0,0, 0.1); */
+    background-color: rgb(255, 239, 239);
+}
+
+.form-group.required label::before
+{
+    content: "! ";
+    color: red;
+    font-weight: bold;
+}
