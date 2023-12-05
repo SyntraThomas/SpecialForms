@@ -28,7 +28,7 @@
         </section>
         <section>
             <h2>Kiezen uit een lijst</h2>
-            <form action="#">
+            <form action="#" id="testform">
                 <div class="form-group required">
                     <label for="landlijst">Land:</label>
                     <select name="landlijst" id="landlijst" required>
@@ -42,8 +42,23 @@
                 </div>
                 <input type="submit" value="Verzenden">
             </form>
+            <div id="success"><p>JIPPIE!!!</p></div>
         </section>
     </main>
+
+    <script>
+        let formulier = document.getElementById('testform');
+        formulier.addEventListener('submit', function(event) {
+            event.preventDefault();
+            let landlijst = document.getElementById('landlijst');
+            if (landlijst.value === 'F')
+            {
+                formulier.style.display = 'none';
+                let success = document.getElementById('success');
+                success.style.display = 'block';
+            }
+        })
+    </script>
 </body>
 
 </html>

@@ -22,3 +22,10 @@ main
     color: red;
     font-weight: bold;
 }
+
+#success
+{
+    background-color: greenyellow;
+    font-weight: bold;
+    display: none;
+}
