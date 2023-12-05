@@ -8,13 +8,33 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Special forms in HTML</h1>
     <main>
+        <h1>Special forms in HTML</h1>
         <section>
             <h2>Auto-complete 1</h2>
             <div class="form-group">
                 <label for="land">Land:</label>
-                <input type="text" name="land" id="land">
+                <input type="text" name="land" id="land" list="landen">
+                <datalist id="landen">
+                    <option value="NL">Nederland</option>
+                    <option value="F">Frankrijk</option>
+                    <option value="D">Duitsland</option>
+                    <option value="L">Luxemburg</option>
+                    <option value="B">Belgie</option>
+                </datalist>
+            </div>
+        </section>
+        <section>
+            <h2>Kiezen uit een lijst</h2>
+            <div class="form-group">
+                <label for="landlijst">Land:</label>
+                <select name="landlijst" id="landlijst">
+                    <option value="NL">Nederland</option>
+                    <option value="F">Frankrijk</option>
+                    <option value="D">Duitsland</option>
+                    <option value="L">Luxemburg</option>
+                    <option value="B">Belgie</option>
+                </select>
             </div>
         </section>
     </main>
